@@ -1,0 +1,22 @@
+<form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+
+    <div class="col-md-6 col-md-offset-3 jumbotron">
+        <legend class="text-center">Se connecter</legend>
+
+        <div class="form-group">
+            <label for="email">adresse de messagerie</label>
+            <input formControlName="email" type="email" class="form-control" id="email" placeholder="Adresse de messagerie">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Mot de passe</label>
+            <input formControlName="password" type="password" class="form-control" id="password" placeholder="Mot de passe">
+        </div>
+
+        <button [disabled]="!signInForm.valid" type="submit" class="btn btn-primary">Se connecter</button>
+        <div class="alert-danger">
+            <span>{{errorMessage}}</span>
+        </div>
+    </div>
+
+</form>

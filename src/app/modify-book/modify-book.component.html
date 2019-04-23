@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row ">
+    <h2 class="page-title text-center">Modification d'un livre | Methode Reactive</h2>
+    <div class="col-md-8 col-md-offset-2 jumbotron">
+
+      <form (ngSubmit)="onSaveModifyBook()" [formGroup]="modifyBookForm">
+
+        <div class="form-group">
+          <label for="title">Titre</label>
+          <input formControlName="title" type="text" class="form-control" id="title" placeholder="Titre" value="{{title}}">
+        </div>
+
+        <div class="form-group">
+          <label for="body">Résumé du livre</label>
+          <textarea formControlName="body" type="text" class="form-control" id="body" placeholder="Résumé du livre" value="{{body}}"
+            rows="8"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="author">Auteur</label>
+          <input formControlName="author" type="text" class="form-control" id="author" placeholder="Nom de l'auteur" value="{{author}}">
+        </div>
+
+        <div class="form-group">
+          <h4>Ajouter une photo</h4>
+          <input (change)="detectFiles($event)" accept="image/*" type="file" class="form-control">
+          <b class="text-succes" *ngIf="fileUploaded"> Fichier chargé !</b>
+        </div>
+
+        <button [disabled]="fileIsUploading "  type="submit" class="btn btn-success btn-block"> Valider </button>
+      </form>
+
+    </div>
+  </div>
+</div>

@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+ .container{
+     margin: 0 auto;
+ }
+
+.home{
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    padding-bottom: 100px;
+    min-height: 100%;
+    position: relative;
+    height: auto !important;
+    overflow: hidden;
+}
+
+.books{
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    padding-bottom: 100px;
+    min-height: 100%;
+    position: relative;
+    height: auto !important;
+    overflow: hidden;
+}
+
+
+
+.btn{
+    padding: 6px 6px;
+}
+
+p,b{
+    font-size: 12px;
+}
+
+.ul{
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #e7e7e7;
+    padding: 10px 10px;
+    color: black;
+    text-align: center;
+  }

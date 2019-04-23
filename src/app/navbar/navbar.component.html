@@ -1,0 +1,32 @@
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand btn btn-inverse " routerLink="home" (click)="setTitle('TP Angular CRUD App | Accueil')">Tutoriel Angular</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li (click)="setTitle('TP Angular CRUD App | Livres')" routerLinkActive="active"><a routerLink="books" class="btn btn-outline-dark btn-block" style="margin-right: 100px;">Livres</a></li>
+
+        <li><a (click)="onNewBooks()"
+                (click)="setTitle('TP Angular CRUD App | Ajouter un livre')"
+                *ngIf="isAuth"
+                class="btn btn-info">Ajouter un livre</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li routerLinkActive="active" ><a routerLink="auth/signin"
+                                        (click)="setTitle('TP Angular CRUD App | Connexion')"                                           *ngIf="!isAuth">Connexion</a></li>
+        <li routerLinkActive="active" ><a routerLink="auth/signup"
+                                          (click)="setTitle('TP Angular CRUD App | Créer un compte')"                                     *ngIf="!isAuth">Créer un compte</a></li>
+        <li><a (click)="onSignOut()"
+              *ngIf="isAuth" style="cursor: pointer;">Déconnexion</a></li>
+
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>

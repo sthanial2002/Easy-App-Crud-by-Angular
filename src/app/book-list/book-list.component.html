@@ -1,0 +1,28 @@
+<h1 class="page-header">Bibliothèque | Liste des Livres</h1>
+<div class="col-md-12 books">
+  <ul class="ul" *ngFor="let b of books; let i = index">
+    <li>
+      <div class="col-md-4">
+        <div class="panel panel-success">
+          <div class="panel-heading"> <b>{{ b.title}}</b> </div>
+          <div class="panel-body">
+
+            <div class="col-md-12" >
+              <img [src]="b.photo" alt="{{ b.title}}" style="max-height: 265px;max-width: 220px"lass="img-responsive thumbnail">
+            </div>
+
+            <div class="row">
+              <div class="col-md-9">
+                <b>Auteur : {{b.author}} </b>
+              </div>
+              <div class="col-md-3">
+                <p><button (click)="onViewBook(i)" class="btn btn-info ">Détails</button></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

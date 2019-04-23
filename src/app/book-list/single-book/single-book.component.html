@@ -1,0 +1,38 @@
+<div class="row jumbotron">
+  <div class="panel panel-success">
+    <div class="panel-heading"><b>{{ book.title}}</b> </div>
+    <div class="panel-body">
+      <div class="row">
+
+        <div class="col-md-12">
+          <div class="col-md-4">
+            <img [src]="book.photo" alt="" class="img-responsive thumbnail"  *ngIf="book.photo">
+          </div>
+          <div class="col-md-8">
+            <p class="text-justify"><b>{{book.body}}</b> </p>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="col-md-10">
+            <p><b>Auteur : {{book.author}}</b></p>
+          </div>
+          <div class="col-md-1">
+            <p><button (click)="onEditBook()"
+                       (click)="setTitle('TP Angular CRUD App | Modifier un livre')"
+                       class="btn btn-info ">Modifier</button></p>
+          </div>
+          <div class="col-md-1">
+            <p><button (click)="onDeleteBook(book)" class="btn btn-danger ">Supprimer</button></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-title coj-md-12">
+  <p> <a routerLink="/books"> <span class="glyphicon glyphicon-circle-arrow-left"> </span>
+      Retour vers la liste des appareils </a></p>
+</div>
