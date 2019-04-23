@@ -1,7 +1,26 @@
-# TPAngular2
+<div class="container wrapper">
+        
+  <h2>Application développée avec Angular 7 |  CRUD's Application </h2>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+  <p>Il s'agit d'une application de simulation de gestion des livres d'une bibliothèque en ligne. <br><br>
+    <b>Voir Démo <a href="https://http-client-demo-angular.firebaseapp.com">Ici</a></b> </p>
+  <hr>
 
+
+  <h3>Outils ayant servis au développement et au déploiement de cette application :</h3>
+
+  <ul>
+      <li>Angular 7.2.13</li>
+      <li>Angular CLI 7.3.8</li>
+      <li>Bootstrap 3</li>
+      <li>Github</li>
+      <li>Firebase Authentification</li>
+      <li>Firebase Database</li>
+      <li>Firebase Storage</li>
+      <li>Firebase Hosting</li>
+ </ul>
+  
+</div>
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
